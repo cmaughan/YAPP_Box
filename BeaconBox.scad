@@ -23,19 +23,22 @@ pcbStands =
 ];
 
 
+// USB connector
 cutoutsBack =
 [
     [4.5, 0, 9.5, 4, 1, yappRoundedRect, yappCoordPCB]
 ];
 
+// LED
 cutoutsLid =
 [
-    [pcbLength / 2, pcbWidth / 2, 0, 8, 3, yappCircle, yappCenter]
+    [pcbLength / 2, pcbWidth / 2, 0, 8, 3.5, yappCircle, yappCenter]
 ];
 
+// Stereo jack
 cutoutsFront =
 [
-    [5, 8, 0, 8, 3, yappCircle, yappCoordPCB]
+    [5.5, 8, 0, 8, 3.5, yappCircle, yappCoordPCB]
 ];
 
 module hookBaseInside()
