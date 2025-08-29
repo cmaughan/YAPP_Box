@@ -4,7 +4,7 @@ pcbLength = 125;
 pcbWidth = 25;
 pcbThickness=1.5;
 baseWallHeight = 10;
-lidWallHeight = 30;
+lidWallHeight = 32;
 roundRadius = 0;
 
 showPCB = false;
@@ -16,7 +16,7 @@ pcbStands =
     [3, 3, 12, yappDefault, 5, 2.5, yappAllCorners, yappCoordPCB, yappHole, yappBaseOnly]
 ];
 
-// USB connector
+// Digial Display
 cutoutsBase =
 [
     [6, 3, 101, 19, 0, yappRectangle, yappCoordPCB],
@@ -24,15 +24,17 @@ cutoutsBase =
     [pcbLength - 11, pcbWidth - 8, 0, 0, 1.5, yappCircle, yappCoordPCB]
 ];
 
-cutoutsLeft =
+cutoutsLid =
 [
     // SMA
-    [pcbLength / 4, 26, 0, 0, 3, yappCircle, yappCenter],
+    [pcbLength / 4, pcbWidth / 2, 0, 0, 3, yappCircle, yappCenter],
     
     // Powerpole
-    [pcbLength - pcbLength / 4, 26, 21, 12, 0, yappRectangle, yappCenter],
-    [pcbLength - pcbLength / 4 + 14, 26, 0, 0, 1.5, yappCircle, yappCenter],
-    [pcbLength - pcbLength / 4 - 14, 26, 0, 0, 1.5, yappCircle, yappCenter]
+    [pcbLength - pcbLength / 4, pcbWidth / 2, 21.25, 12.25, 0, yappRectangle, yappCenter],
+    
+    // From center of rect
+    [pcbLength - pcbLength / 4 + 14, pcbWidth / 2, 0, 0, 1.5, yappCircle, yappCenter],
+    [pcbLength - pcbLength / 4 - 14, pcbWidth / 2, 0, 0, 1.5, yappCircle, yappCenter]
     //[pcbLength / 3, 23, 0, 0, 3, yappCircle, yappCenter],
     
 ];
