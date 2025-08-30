@@ -23,6 +23,9 @@ tag_preview_color = "teal";
 text_size = 5;
 label_text = "7Mhz BPF";
 label_size = textmetrics(text=label_text,size=text_size);
+panel_size = label_size.size;
+
+
 text_direction = "ltr"; // ["ltr", "rtl", "ttb", "btt"]
 
 text_height = .6; // [0.01:0.01:5]
@@ -80,7 +83,7 @@ module tag(){
     
     color(tag_preview_color)
     difference() {
-        cube([width,length,tag_thickness], true); 
+        cube(size=[label_size.size.y + 2,label_size.size.x+2,tag_thickness], true); 
         
         /* Hole translate([-3, 0, 0])
             cylinder(h=tag_thickness + 1, r=3, center=true);
@@ -107,8 +110,7 @@ color(text_preview_color)
 render_part = is_undef(render_part) ? "" : render_part;
 if (render_part == "plate") tag();
 else if (render_part == "text") label_text();
-    else {
-        tag();
-        label_text();
-    }
-
+else {
+    tag();
+    label_text();
+}

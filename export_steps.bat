@@ -1,2 +1,2 @@
-& "C:\Program Files\OpenSCAD\openscad.exe" -D 'render_part="plate"' -o plate_part.stl PTO_Tag.scad
-& "C:\Program Files\OpenSCAD\openscad.exe" -D 'render_part="text"' -o text_part.stl PTO_Tag.scad
+"C:\Program Files\OpenSCAD (Nightly)\openscad.com" -D render_part="plate" --enable=all -o plate_part.stl BPF_Tag.scad
+"C:\Program Files\OpenSCAD (Nightly)\openscad.com" -D render_part="text" --enable=all -o text_part.stl BPF_Tag.scad
